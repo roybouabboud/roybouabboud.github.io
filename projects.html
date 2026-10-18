@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Projects · Roy Bou Abboud</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Roy Bou Abboud. Robotics engineering student at the University of Toronto, currently a mechatronics engineer at Honda.">
+<meta property="og:title" content="Projects · Roy Bou Abboud">
+<meta property="og:description" content="Roy Bou Abboud. Robotics engineering student at the University of Toronto, currently a mechatronics engineer at Honda.">
+<meta property="og:url" content="https://roybouabboud.com/projects.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232741c4'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav class="nav" aria-label="Site">
+    <a class="home" href="./">Roy Bou Abboud</a>
+    <a href="professional.html">Professional</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="hobbies.html">Hobbies</a>
+  </nav>
+  <header>
+    <h1>Projects</h1>
+    <p>Things I've designed and built, mostly robots.</p>
+  </header>
+
+  <section aria-label="Projects">
+    <div class="entries">
+      <article class="entry" id="cup-pong">
+        <div class="entry-head"><h3>Autonomous cup pong robot</h3><span class="when">Jan–Apr 2026</span></div>
+        <p class="role">Embedded system with LiDAR object detection</p>
+        <div class="media stub" aria-hidden="true">±2° aim<br>200 cm range</div>
+        <ul>
+          <li>Reached 100% target detection and ±2° aim accuracy by reading a TF-Luna LiDAR over 400 kHz I²C during a servo-driven 115° polar scan.</li>
+          <li>Cut integration failures by building 7 isolated PlatformIO test environments in C++ to validate each peripheral (LiDAR, servo, hall sensor, IR beam, motor drivers) before bringing the system together.</li>
+          <li>Hit a 200 cm launch range by generating multi-frequency hardware PWM for the dual flywheel and indexer motors, with a staged duty-cycle spin-up to overcome static load before firing.</li>
+        </ul>
+        <ul class="tags"><li>C++</li><li>ESP32</li><li>I²C</li><li>PlatformIO</li><li>Motor control</li><li>Hardware-in-the-loop</li></ul>
+      </article>
+      <article class="entry" id="garment-classifier">
+        <div class="entry-head"><h3>Garment classifier</h3><span class="when">Jan–Apr 2026</span></div>
+        <p class="role">Convolutional neural network approach</p>
+        <div class="media stub" aria-hidden="true">92.8%<br>test accuracy</div>
+        <ul>
+          <li>Reached 92.8% test accuracy and 0.928 macro-F1, against 0.899 for a HOG + SVM baseline, by fine-tuning ResNet-18 with a custom fully connected head (8.5M trainable parameters).</li>
+          <li>Raised the weakest class (skirts) from 0.74 to 0.90 F1 by merging 3 datasets (6K+ images) and correcting an 8:1 class imbalance through capping and augmentation.</li>
+        </ul>
+        <ul class="tags"><li>PyTorch</li><li>CUDA</li><li>Hyperparameter tuning</li><li>Data preprocessing</li></ul>
+      </article>
+      <article class="entry" id="mail-robot">
+        <div class="entry-head"><h3>Mail delivery robot</h3><span class="when">Sep–Dec 2025</span></div>
+        <p class="role">Colour-detection based, line-following rover</p>
+        <div class="media stub" aria-hidden="true">11 states<br>4 landmarks</div>
+        <ul>
+          <li>Reached over 90% localization confidence across an 11-state topological map with only 4 distinguishable landmarks, using a discrete Bayes filter with probabilistic motion and measurement models.</li>
+          <li>Eliminated false landmark detections under changing light with a weighted colour classifier and an 11-frame debounce filter on camera measurements.</li>
+          <li>Completed autonomous deliveries to 3 random targets from an unknown start by splitting PID line-following and localization into separate ROS nodes talking over pub/sub topics.</li>
+        </ul>
+        <ul class="tags"><li>ROS</li><li>rospy</li><li>Bayes filter</li><li>PID</li><li>Python</li><li>Linux</li></ul>
+      </article>
+      <article class="entry" id="power-supply">
+        <div class="entry-head"><h3>DC power supply</h3><span class="when">Sep–Dec 2025</span></div>
+        <p class="role">Fully functional power supply built from scratch</p>
+        <div class="media stub" aria-hidden="true">0–19 V<br>99% accurate</div>
+        <ul>
+          <li>Designed a two op-amp amplifier that turns a 0–2.5 mA sensing current into an adjustable 0–19 V output.</li>
+          <li>Built and tested an op-amp filter in SPICE that cuts noise above 50 Hz by 92%.</li>
+          <li>Designed a single-via PCB in Eagle with test pins, then fabricated, soldered and validated it with a multimeter and oscilloscope, landing within 1% of a lab bench supply.</li>
+        </ul>
+        <ul class="tags"><li>PCB design</li><li>Eagle</li><li>SPICE</li><li>Op-amp filters</li><li>Soldering</li></ul>
+      </article>
+    </div>
+  </section>
+  <footer>
+    <p>I speak English, French and Arabic.</p>
+    <p>© 2026 Roy Bou Abboud</p>
+  </footer>
+</main>
+</body>
+</html>
