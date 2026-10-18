@@ -7,7 +7,7 @@ Roy Bouabboud's personal site. Plain static HTML, no build step, hosted on GitHu
 - Project cards link to `projects.html#<id>`; Currently/Previously bullets link to `professional.html#<id>`. Keep ids in sync.
 - Media: a `<div class="media stub">` is a stand-in box. To add a photo or video, put the file in `media/` and replace the stub with `<div class="media"><img src="media/x.jpg" alt="..."></div>` (or `<video src=... autoplay muted loop playsinline>`).
 - Push to the `main` branch; GitHub Pages republishes within a minute or two.
-- `CNAME` holds the custom domain. Don't delete it, or Pages drops the domain.
+- `CNAME` holds the custom domain. Add it (one line: `roybouabboud.com`) only once the domain is bought and DNS is set; never delete it after that, or Pages drops the domain.
 
 ## Hosting
 GitHub Pages: Settings → Pages → Source "Deploy from a branch", branch `main`, folder `/ (root)`. Custom domain `roybouabboud.com`, Enforce HTTPS on.
