@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7cc8ff"/><stop offset="0.45" stop-color="#1e7fe0"/><stop offset="1" stop-color="#0a3f9e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe680"/><stop offset="0.5" stop-color="#f6b81a"/><stop offset="1" stop-color="#d9800a"/>
+    </linearGradient>
+    <clipPath id="front"><rect x="0" y="128" width="150" height="128"/></clipPath>
+  </defs>
+  <g transform="rotate(-22 128 128)">
+    <ellipse cx="128" cy="128" rx="122" ry="56" fill="none" stroke="url(#gold)" stroke-width="20"/>
+  </g>
+  <text x="10" y="166" textLength="236" lengthAdjust="spacingAndGlyphs" transform="translate(0 -40) scale(1 1.25)" font-family="DejaVu Serif, Georgia, serif" font-weight="700" font-style="italic" font-size="104" fill="url(#blue)" stroke="#06306f" stroke-width="3" paint-order="stroke">RBA</text>
+  <g transform="rotate(-22 128 128)"><ellipse cx="128" cy="128" rx="122" ry="56" fill="none" stroke="url(#gold)" stroke-width="20" clip-path="url(#front)"/></g>
+</svg>
