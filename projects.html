@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <main>
@@ -77,7 +77,14 @@
       <article class="entry" id="power-supply">
         <div class="entry-head"><h3>DC power supply</h3><span class="when">Sep–Dec 2025</span></div>
         <p class="role">Fully functional power supply built from scratch</p>
-        <div class="media stub" aria-hidden="true">0–19 V<br>99% accurate</div>
+        <div class="gallery landscape">
+          <img src="media/power-supply-front.jpg" alt="Front of the board: LCD screen, rotary knob and button, held in 3D-printed clips" loading="lazy">
+          <img src="media/power-supply-back.jpg" alt="My hand-soldered op-amp board mounted on the back of the main PCB" loading="lazy">
+        </div>
+        <div class="gallery">
+          <img src="media/power-supply-bench.jpg" alt="The supply running on a lab bench, screen showing 4.77 V against a 5.00 V target" loading="lazy">
+          <img src="media/power-supply-side.jpg" alt="Side view of the stacked boards" loading="lazy">
+        </div>
         <ul>
           <li>Designed a two op-amp amplifier that turns a 0–2.5 mA sensing current into an adjustable 0–19 V output.</li>
           <li>Built and tested an op-amp filter in SPICE that cuts noise above 50 Hz by 92%.</li>
