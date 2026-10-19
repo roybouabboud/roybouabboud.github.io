@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <main>
@@ -49,11 +49,18 @@
       <article class="entry" id="garment-classifier">
         <div class="entry-head"><h3>Garment classifier</h3><span class="when">Jan–Apr 2026</span></div>
         <p class="role">Convolutional neural network approach</p>
-        <div class="media stub" aria-hidden="true">92.8%<br>test accuracy</div>
+        <p>A first step toward a clothes-folding robot: a model that looks at a single garment and tells which of six types it is. <a href="media/garment-classifier-report.pdf">Read the final report (PDF)</a>.</p>
         <ul>
           <li>Reached 92.8% test accuracy and 0.928 macro-F1, against 0.899 for a HOG + SVM baseline, by fine-tuning ResNet-18 with a custom fully connected head (8.5M trainable parameters).</li>
           <li>Raised the weakest class (skirts) from 0.74 to 0.90 F1 by merging 3 datasets (6K+ images) and correcting an 8:1 class imbalance through capping and augmentation.</li>
         </ul>
+        <figure class="figure"><img src="media/garment-architecture.png" alt="Model diagram: input image, ResNet-18 residual stages, then a custom linear head that outputs the predicted class" loading="lazy"><figcaption>ResNet-18 backbone with a custom fully connected head.</figcaption></figure>
+        <figure class="figure"><img src="media/garment-closet-test.jpg" alt="Grid of 18 clothes from my closet, each labelled with predicted and true class; all correct" loading="lazy"><figcaption>Tested on clothes from my own closet: 18 of 18 correct.</figcaption></figure>
+        <figure class="figure"><img src="media/garment-confusion-matrix.png" alt="Confusion matrix on the test set across hoodie, long pants, long sleeve sweater, shorts, skirts and t-shirt" loading="lazy"><figcaption>Confusion matrix on the 900-image test set.</figcaption></figure>
+        <div class="figure-row">
+          <figure class="figure"><img src="media/garment-dataset.png" alt="Images per class across the three merged datasets" loading="lazy"><figcaption>Images per class across the 3 merged datasets.</figcaption></figure>
+          <figure class="figure"><img src="media/garment-metrics.png" alt="Precision, recall and F1 per class before and after balancing" loading="lazy"><figcaption>Per-class metrics before (left) and after (right) balancing the classes.</figcaption></figure>
+        </div>
         <ul class="tags"><li>PyTorch</li><li>CUDA</li><li>Hyperparameter tuning</li><li>Data preprocessing</li></ul>
       </article>
       <article class="entry" id="mail-robot">
