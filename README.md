@@ -5,7 +5,7 @@ Roy Bouabboud's personal site. Plain static HTML, no build step, hosted on GitHu
 ## Edit and deploy
 - After editing `style.css`, bump the `?v=` number on its `<link>` in all four pages so browsers drop the cached copy. Update "Last updated" in each footer when content changes.
 - Pages: `index.html` (landing: Currently, project cards, Previously), `professional.html`, `projects.html`, `hobbies.html`. Shared styles in `style.css`. Edit the HTML directly.
-- Project cards link to `projects.html#<id>`; Currently/Previously bullets link to `professional.html#<id>`. Keep ids in sync.
+- Links use clean URLs without .html (`/projects#<id>`, `/professional#<id>`, `/` for home); GitHub Pages serves `projects.html` at `/projects`. Keep ids in sync.
 - Media: a `<div class="media stub">` is a stand-in box. To add a photo or video, put the file in `media/` and replace the stub with `<div class="media"><img src="media/x.jpg" alt="..."></div>` (or `<video src=... autoplay muted loop playsinline>`).
 - Push to the `main` branch; GitHub Pages republishes within a minute or two.
 - `CNAME` holds the custom domain. Added 2026-10-19 after the domain was bought on Spaceship. Never delete it after that, or Pages drops the domain.
