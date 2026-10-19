@@ -94,6 +94,8 @@ header { display: grid; gap: 0.9rem; }
 .strip img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; border: 1px solid var(--rule); display: block; }
 .strip figcaption { font: 500 0.68rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 @media (max-width: 480px) { .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.strip-before { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.strip-after { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 /* Detailed entries (Professional, Projects, Hobbies) */
 .entries { display: grid; gap: 2.25rem; }
