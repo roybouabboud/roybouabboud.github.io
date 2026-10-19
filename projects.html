@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <main>
@@ -34,7 +34,11 @@
       <article class="entry" id="cup-pong">
         <div class="entry-head"><h3>Autonomous cup pong robot</h3><span class="when">Jan–Apr 2026</span></div>
         <p class="role">Embedded system with LiDAR object detection</p>
-        <div class="media stub" aria-hidden="true">±2° aim<br>200 cm range</div>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Q0vxaehKVus" title="Autonomous cup pong robot demo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+        <div class="gallery">
+          <img src="media/cup-pong-1.jpg" alt="The robot's purple 3D-printed frame, launch tube and twin flywheel motors" loading="lazy">
+          <img src="media/cup-pong-2.jpg" alt="Breadboard wiring for the ESP32, LiDAR and motor drivers" loading="lazy">
+        </div>
         <ul>
           <li>Reached 100% target detection and ±2° aim accuracy by reading a TF-Luna LiDAR over 400 kHz I²C during a servo-driven 115° polar scan.</li>
           <li>Cut integration failures by building 7 isolated PlatformIO test environments in C++ to validate each peripheral (LiDAR, servo, hall sensor, IR beam, motor drivers) before bringing the system together.</li>
