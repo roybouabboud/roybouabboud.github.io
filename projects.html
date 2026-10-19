@@ -66,7 +66,7 @@
       <article class="entry" id="mail-robot">
         <div class="entry-head"><h3>Mail delivery robot</h3><span class="when">Sep–Dec 2025</span></div>
         <p class="role">Colour-detection based, line-following rover</p>
-        <div class="media stub" aria-hidden="true">11 states<br>4 landmarks</div>
+        <figure class="figure"><a href="media/mail-robot-belief.png"><img src="media/mail-robot-belief.png" alt="Heatmap of the robot's belief over offices 2 to 12 across 13 time steps, starting uniform and converging to office 8 with about 0.87 probability" loading="lazy"></a><figcaption>The Bayes filter's belief over time: it starts spread evenly across every office, tracks the robot as it moves, and settles on office 8.</figcaption></figure>
         <ul>
           <li>Reached over 90% localization confidence across an 11-state topological map with only 4 distinguishable landmarks, using a discrete Bayes filter with probabilistic motion and measurement models.</li>
           <li>Eliminated false landmark detections under changing light with a weighted colour classifier and an 11-frame debounce filter on camera measurements.</li>
