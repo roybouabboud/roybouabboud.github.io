@@ -88,6 +88,7 @@ header { display: grid; gap: 0.9rem; }
 .figure-row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 0.75rem; align-items: start; }
 @media (max-width: 480px) { .figure-row { grid-template-columns: 1fr; } }
 .figure.compact img { width: auto; max-width: 100%; max-height: 18rem; }
+.figure.large img { width: auto; max-width: 100%; max-height: 30rem; }
 .strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.5rem; }
 .strip figure { margin: 0; display: grid; gap: 0.3rem; min-width: 0; }
 .strip img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; border: 1px solid var(--rule); display: block; }
@@ -118,3 +119,17 @@ header { display: grid; gap: 0.9rem; }
 footer { font: 400 0.8rem/1.6 var(--mono); color: var(--muted); display: grid; gap: 0.2rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
 .foot-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0 1rem; }
 .bullets .lead { color: var(--fg); }
+
+/* Audio player and link buttons (Hobbies › DJing) */
+.soundcloud { width: 100%; height: 166px; border: 0; border-radius: 6px; display: block; }
+.buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.button { font: 500 0.8rem/1 var(--mono); text-decoration: none; color: var(--fg); border: 1px solid var(--rule); border-radius: 4px; padding: 0.55rem 0.8rem; }
+.button:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Photo overlay (lightbox.js) */
+.gallery img, .strip img, .figure img { cursor: zoom-in; }
+.lightbox { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: rgba(10, 12, 14, 0.88); cursor: zoom-out; }
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: 90vh; width: auto; height: auto; border-radius: 6px; cursor: default; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); }
+.lightbox-close { position: absolute; top: max(12px, env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); width: 2.5rem; height: 2.5rem; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.14); color: #fff; font: 400 1.6rem/1 var(--sans); cursor: pointer; }
+.lightbox-close:hover, .lightbox-close:focus-visible { background: rgba(255, 255, 255, 0.28); outline: none; }
